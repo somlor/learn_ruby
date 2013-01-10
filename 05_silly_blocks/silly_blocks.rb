@@ -1,9 +1,11 @@
 def reverser
-	yield.split.map { |word| word.reverse }.join(" ")
+	str = yield
+	str.split.map { |word| word.reverse }.join(" ")
 end
 
-def adder(n = 1)
-	yield + n
+def adder(n1 = 1)
+	n2 = yield
+	n1 + n2
 end
 
 def repeater(n = 1)
