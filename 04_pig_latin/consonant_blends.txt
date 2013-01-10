@@ -1,1 +1,1 @@
-bl br cl cr dr fl fr gl gr pl pr sc sch scr sh shr sk sl sm sn sph spl spr squ st str sw th thr tr tw wh wr
+bl br cl cr dr fl fr gl gr pl pr qu sc sch scr sh shr sk sl sm sn sph spl spr squ st str sw th thr tr tw wh wr
