@@ -1,4 +1,4 @@
-require "time"
+require 'time'
 
 def time_diff(start, finish)
 	finish.to_f - start.to_f
