@@ -9,7 +9,7 @@ class Timer
 		hours = @seconds / (60 * 60)
 		minutes = (@seconds / 60) % 60
 		seconds = @seconds % 60
-		@seconds = format("%02d:%02d:%02d", hours, minutes, seconds)
+		format("%02d:%02d:%02d", hours, minutes, seconds)
 	end
 end
 
