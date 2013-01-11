@@ -27,9 +27,7 @@ class	Dictionary
 	end
 
 	def printable
-		printable = []
-		keywords.each { |k| printable << "[#{k}] \"#{@entries[k]}\"" }
-		printable.join("\n")
+		@entries.sort.map { |k, v| "[#{k}] \"#{v}\"" }.join("\n")
 	end
 end
 
