@@ -20,9 +20,9 @@ class RPNCalculator
 		OPERATIONS.keys.include?(mname) ? true : super
 	end
 
-	def operate(op)
+	def operate(operator)
 		raise "calculator is empty" if @stack.empty?
-		@value = eval("#{@stack.pop.to_s} #{op} #{@stack.pop.to_s}")
+		@value = eval("#{@stack.pop.to_s} #{operator} #{@stack.pop.to_s}")
 		@stack << @value
 	end
 
