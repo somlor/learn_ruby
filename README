@@ -3,3 +3,21 @@ ___  ___  __  ___     ___    __   __  ___
  |  |___ .__/  |     |    | |  \ .__/  |  
 
 http://testfirst.org/learn_ruby
+
+wrote two variations of rpn_calculator.rb and wanted to see which was faster. 
+
+here is the code: https://github.com/somlor/learn_ruby/blob/master/12_rpn_calculator/rpn_calculator.rb
+
+here is the results:
+
+                            user       system     total       real
+    refactor: simple math:  0.900000   0.000000   0.900000 (  0.904070)
+    original: simple math:  0.100000   0.000000   0.100000 (  0.100580)
+
+    refactor: harder math:  2.050000   0.010000   2.060000 (  2.070785)
+    original: harder math:  0.140000   0.000000   0.140000 (  0.140768)
+
+    refactor: string eval:  4.020000   0.010000   4.030000 (  4.033575)
+    original: string eval:  4.630000   0.000000   4.630000 (  4.645004)
+
+my refactor used method_missing which i'm assuming is costly.
