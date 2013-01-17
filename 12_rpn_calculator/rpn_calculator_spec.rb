@@ -40,7 +40,7 @@ describe RPNCalculator do
   attr_accessor :calculator
 
   before do
-    @calculator = RPNCalculator.new
+    @calculator = RPNCalculatorOriginal.new
   end
 
   it "adds two numbers" do
