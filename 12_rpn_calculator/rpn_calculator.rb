@@ -1,15 +1,11 @@
 class RPNCalculator
 	OPERATIONS = {plus: '+', minus: '-', times: '*', divide: '/'}
 
-	attr_accessor :value
+	attr_reader :value
 
 	def initialize
 		@stack = []
 		@value = nil
-	end
-
-	def push(val)
-		@stack << val.to_f
 	end
 
 	def method_missing(mname)
@@ -18,6 +14,10 @@ class RPNCalculator
 
 	def respond_to?(mname)
 		OPERATIONS.keys.include?(mname) ? true : super
+	end
+
+	def push(val)
+		@stack << val.to_f
 	end
 
 	def operate(operator)
