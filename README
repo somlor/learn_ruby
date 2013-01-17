@@ -8,17 +8,17 @@ i wrote three variations of rpn_calculator.rb. here is the code: https://github.
 
 here are the benchmarks:
 
-	                                 user       system     total       real
-	predefined methods - simple   :  0.100000   0.000000   0.100000 (  0.102908)
-	method_missing - simple       :  0.890000   0.000000   0.890000 (  0.888304)
-	dynamic methods - simple      :  1.770000   0.000000   1.770000 (  1.781511)
+                                     user       system     total       real
+    predefined methods - simple   :  0.100000   0.000000   0.100000 (  0.102908)
+    method_missing - simple       :  0.890000   0.000000   0.890000 (  0.888304)
+    dynamic methods - simple      :  1.770000   0.000000   1.770000 (  1.781511)
 
-	predefined methods - harder   :  0.150000   0.000000   0.150000 (  0.143028)
-	method_missing - harder       :  2.010000   0.000000   2.010000 (  2.013814)
-	dynamic methods - harder      :  2.810000   0.000000   2.810000 (  2.813277)
+    predefined methods - harder   :  0.150000   0.000000   0.150000 (  0.143028)
+    method_missing - harder       :  2.010000   0.000000   2.010000 (  2.013814)
+    dynamic methods - harder      :  2.810000   0.000000   2.810000 (  2.813277)
 
-	predefined methods - str eval :  1.140000   0.000000   1.140000 (  1.143905)
-	method_missing - str eval     :  3.930000   0.000000   3.930000 (  3.931364)
-	dynamic methods - str eval    :  5.930000   0.000000   5.930000 (  5.948366)
+    predefined methods - str eval :  1.140000   0.000000   1.140000 (  1.143905)
+    method_missing - str eval     :  3.930000   0.000000   3.930000 (  3.931364)
+    dynamic methods - str eval    :  5.930000   0.000000   5.930000 (  5.948366)
 
 ...
