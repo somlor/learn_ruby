@@ -35,12 +35,12 @@
 #
 require "rpn_calculator"
 
-describe RPNCalculator do
+describe RPNCalculatorPDM do
 
   attr_accessor :calculator
 
   before do
-    @calculator = RPNCalculatorOriginal.new
+    @calculator = RPNCalculatorPDM.new
   end
 
   it "adds two numbers" do
