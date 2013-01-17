@@ -6,9 +6,9 @@ http://testfirst.org/learn_ruby
 
 wrote two variations of rpn_calculator.rb and wanted to see which was faster. 
 
-here is the code: [https://github.com/somlor/learn_ruby/blob/master/12_rpn_calculator/rpn_calculator.rb](rpn_calculator.rb)
+here is the code: https://github.com/somlor/learn_ruby/blob/master/12_rpn_calculator/rpn_calculator.rb
 
-here is the results:
+here are the results:
 
                             user       system     total       real
     refactor: simple math:  0.900000   0.000000   0.900000 (  0.904070)
