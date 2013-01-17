@@ -1,13 +1,13 @@
 class Array
 	def sum
-		self.empty? ? 0 : self.reduce(:+)
+		self.reduce(0, :+)
 	end
 
 	def square
-		self.empty? ? self : self.map { |n| n * n }
+		self.map { |n| n * n }
 	end
 
 	def square!
-		self.empty? ? self : self.map! { |n| n * n }
+		self.map! { |n| n * n }
 	end
 end
