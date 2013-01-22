@@ -4,21 +4,21 @@ ___  ___  __  ___     ___    __   __  ___
 
 http://testfirst.org/learn_ruby
 
-i wrote three variations of rpn_calculator.rb. here is the code: https://github.com/somlor/learn_ruby/blob/master/12_rpn_calculator/rpn_calculator.rb
+i wrote three variations of rpn_calculator.rb. the first uses predefined methods for plus, minus, times, divide. the second uses method_missing? for these methods. the last dynamically defines these methods when the class is initialized.
+
+here is the code: https://github.com/somlor/learn_ruby/blob/master/12_rpn_calculator/rpn_calculator.rb
 
 here are the benchmarks:
 
-                                     user       system     total       real
-    predefined methods - simple   :  0.100000   0.000000   0.100000 (  0.102908)
-    method_missing - simple       :  0.890000   0.000000   0.890000 (  0.888304)
-    dynamic methods - simple      :  1.770000   0.000000   1.770000 (  1.781511)
+                                   user       system     total     real
+    predefined methods (+)      :  0.100000   0.000000   0.100000  (0.101083)
+    method_missing (+)          :  0.900000   0.000000   0.900000  (0.921993)
+    dynamic methods (+)         :  1.860000   0.010000   1.870000  (1.874929)
 
-    predefined methods - harder   :  0.150000   0.000000   0.150000 (  0.143028)
-    method_missing - harder       :  2.010000   0.000000   2.010000 (  2.013814)
-    dynamic methods - harder      :  2.810000   0.000000   2.810000 (  2.813277)
+    predefined methods (/ *)    :  0.140000   0.000000   0.140000  (0.145944)
+    method_missing (/ *)        :  2.110000   0.000000   2.110000  (2.108177)
+    dynamic methods (/ *)       :  3.010000   0.000000   3.010000  (3.024047)
 
-    predefined methods - str eval :  1.140000   0.000000   1.140000 (  1.143905)
-    method_missing - str eval     :  3.930000   0.000000   3.930000 (  3.931364)
-    dynamic methods - str eval    :  5.930000   0.000000   5.930000 (  5.948366)
-
-...
+    predefined methods (string) :  1.170000   0.000000   1.170000  (1.174143)
+    method_missing (string)     :  4.100000   0.000000   4.100000  (4.120637)
+    dynamic methods (string)    :  6.250000   0.000000   6.250000  (6.264934)
