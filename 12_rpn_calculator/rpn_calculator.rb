@@ -149,22 +149,21 @@ if __FILE__ == $0
 	# benchmark predefined vs method_missing vs dynamic methods
 	n = 50000
 	Benchmark.bm(15) do |x|
-		x.report("predefined methods - simple   :") { n.times { c = RPNCalculatorPDM.new; c.push(2); c.push(3); c.plus; }}
-		x.report("method_missing - simple       :") { n.times { c = RPNCalculatorMM.new; c.push(2); c.push(3); c.plus; }}
-		x.report("dynamic methods - simple      :") { n.times { c = RPNCalculatorDM.new; c.push(2); c.push(3); c.plus; }}		
+		x.report("predefined methods (+)      :") { n.times { c = RPNCalculatorPDM.new; c.push(2); c.push(3); c.plus; }}
+		x.report("method_missing (+)          :") { n.times { c = RPNCalculatorMM.new; c.push(2); c.push(3); c.plus; }}
+		x.report("dynamic methods (+)         :") { n.times { c = RPNCalculatorDM.new; c.push(2); c.push(3); c.plus; }}		
 
 		puts
 
-		x.report("predefined methods - harder   :") { n.times { c = RPNCalculatorPDM.new; c.push(2); c.push(3); c.push(4); c.divide; c.times; }}
-		x.report("method_missing - harder       :") { n.times { c = RPNCalculatorMM.new; c.push(2); c.push(3); c.push(4); c.divide; c.times; }}
-		x.report("dynamic methods - harder      :") { n.times { c = RPNCalculatorDM.new; c.push(2); c.push(3); c.push(4); c.divide; c.times; }}
+		x.report("predefined methods (/ *)    :") { n.times { c = RPNCalculatorPDM.new; c.push(2); c.push(3); c.push(4); c.divide; c.times; }}
+		x.report("method_missing (/ *)        :") { n.times { c = RPNCalculatorMM.new; c.push(2); c.push(3); c.push(4); c.divide; c.times; }}
+		x.report("dynamic methods (/ *)       :") { n.times { c = RPNCalculatorDM.new; c.push(2); c.push(3); c.push(4); c.divide; c.times; }}
 
 		puts
 
-		x.report("predefined methods - str eval :") { n.times { c = RPNCalculatorPDM.new; c.evaluate("1 2 3 * + 4 5 - /"); }}
-		x.report("method_missing - str eval     :") { n.times { c = RPNCalculatorMM.new; c.evaluate("1 2 3 * + 4 5 - /"); }}
-		x.report("dynamic methods - str eval    :") { n.times { c = RPNCalculatorDM.new; c.evaluate("1 2 3 * + 4 5 - /"); }}
-
+		x.report("predefined methods (string) :") { n.times { c = RPNCalculatorPDM.new; c.evaluate("1 2 3 * + 4 5 - /"); }}
+		x.report("method_missing (string)     :") { n.times { c = RPNCalculatorMM.new; c.evaluate("1 2 3 * + 4 5 - /"); }}
+		x.report("dynamic methods (string)    :") { n.times { c = RPNCalculatorDM.new; c.evaluate("1 2 3 * + 4 5 - /"); }}
 	end
 
 	c = RPNCalculatorPDM.new
